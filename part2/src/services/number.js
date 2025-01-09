@@ -15,6 +15,11 @@ const createPerson = (tem) => {
 
 const deleteOne = (id) => {
   return axios
-    .delete(`${baseUrl}/${+id}`)
+    .delete(`${baseUrl}/${id+''}`)
 }
-export default { getAll, createPerson, deleteOne }
+
+const update = (id, tem) => {
+  return axios
+    .put(`${baseUrl}/${+id}`, tem)
+}
+export default { getAll, createPerson, deleteOne, update }
